@@ -3,7 +3,7 @@ import { Form, Button, Container } from "react-bootstrap";
 import { useNavigate, Navigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { Cookies } from "react-cookie";
-// import { authenticateAction } from "../redux/actions/authenticateAction";
+import { userAction } from "../redux/actions/userAction";
 
 const SignIn = () => {
   const [id, setId] = useState("");
@@ -18,7 +18,7 @@ const SignIn = () => {
   const loginUser = (event) => {
     event.preventDefault();
     console.log("login user");
-    // dispatch(authenticateAction.login(id, password));
+    // dispatch(userAction.login(id, password));
     // navigate("/");
   };
 
