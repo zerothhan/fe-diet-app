@@ -3,14 +3,16 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Routes, Route } from "react-router-dom";
 import { Cookies } from "react-cookie";
+import { useSelector } from "react-redux";
 import PrivateRoute from "./routes/PrivateRoute";
 import SignIn from "./pages/SignIn";
 import PlanDetail from "./pages/PlanDetail";
 import PlanForm from "./pages/PlanForm";
 
 function App() {
-  const cookies = new Cookies();
-  const authenticate = cookies.get("authenticate");
+  const authenticate = useSelector((state) => state.auth.authenticate);
+  // const cookies = new Cookies();
+  // const authenticate = cookies.get("authenticate");
 
   return (
     <div>
